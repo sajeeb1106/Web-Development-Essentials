@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab-3.2</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab-03</title>
+</head>
+<body>
+    <h2>Registration Form</h2>
+    <fieldset>
+        <legend>User Personal Information</legend>
+        <label for="name">Enter Your First Name:</label><br>
+        <input type="text" name="name" id="name" required><br>
+
+        <label for="name">Enter Your Last Name:</label><br>
+        <input type="text" name="name" id="name" required><br>
+
+        <label for="email">Enter Your Email:</label> <br>
+        <input type="email" name="email" id="email" placeholder="261-16-042@diu.edu.bd" required><br>
+
+        <label for="number">Enter Your Phone Number:</label><br>
+        <input type="tel" name="number" id="number" pattern="[0-9]{11}" required><br><br>
+
+        <label for="dob">Date of Birth:</label><br>
+        <input type="date" id="dob" name="dob" required><br><br>
+
+        <label for="age">Input Your Age</label><br>
+        <input type="age" id="age" name="age" required><br><br>
+
+        <label for="gender">Select Your Gender:</label><br>
+        <input type="radio" name="gender" value="male" id="male" required>
+        <label for="male">Male</label><br>
+        <input type="radio" name="gender" value="female" id="female" required>
+        <label for="female">Female</label><br><br>
+
+        
+    </fieldset><br>
+
+    <fieldset>
+        <legend>Address</legend>
+        <label for="address">Enter Your Address</label><br>
+        <textarea id="address" name="address" rows="3" cols="30"></textarea><br><br>
+
+        <label for="address">City</label><br>
+        <select name="address" id="address" required>
+            <option value="select">--Select--</option>
+            <option value="hsc">Satkhira</option>
+            <option value="ssc">Khulna</option>
+            <option value="bsc">Dhaka</option>
+            <option value="msc">Gazipur</option>
+            <option value= "phd">Bagherhat</option>
+        </select><br><br>
+
+        <label for="number">Postal Code</label><br>
+        <input type="tel" name="number" id="number" pattern="[0-9]{04}" required>
+    </fieldset><br>
+
+    <fieldset>
+        <legend>Account Details</legend>
+        <label for="name">username:</label><br>
+        <input type="text" name="name" id="name" required><br>
+
+        <label for="password">Password(Min 6 character):</label><br>
+        <input type="password" name="password" id="password" required><br>
+
+        <label for="website">website:</label><br>
+        <input type="url" name="website" id="website" placeholder="www.google.com" required><br>
+    </fieldset><br>
+
+    <fieldset>
+        <legend>Education and Interests</legend>
+
+        <label for="education">Highest Education</label><br>
+        <select name="education" id="education" required>
+            <option value="select">Select</option>
+            <option value="hsc">HSC</option>
+            <option value="ssc">SSC</option>
+            <option value="bsc">BSc</option>
+            <option value="msc">MSc</option>
+            <option value= "phd">Phd</option>
+        </select><br><br>
+
+        <label for="interest">Interest(select all that apply)</label><br>
+        <input type="checkbox" name="interest" value="Reading" id="interest" required>
+        <label for="male">Reading</label><br>
+
+        <input type="checkbox" name="interest" value="Sports" id="interest" required>
+        <label for="male">Sports</label><br>
+
+        <input type="checkbox" name="interest" value="Music" id="interest" required>
+        <label for="male">Music</label><br>
+
+        <input type="checkbox" name="interest" value="Coding" id="interest" required>
+        <label for="male">Coding</label><br>
+
+        <input type="checkbox" name="interest" value="Travel" id="interest" required>
+        <label for="male">Travel</label><br><br>
+
+        <label for="time">Preferred contact Time</label><br>
+        <input type="time" id="time" name="time" required>
+    </fieldset><br>
+
+    <fieldset>
+        <legend>Additional information</legend>
+        <label for="file">Upload Your CV(PDF)</label><br>
+        <input type="file" name="" id="file"><br><br>
+
+        <label for="description">About yourself</label><br>
+        <textarea id="description" name="description" rows="3" cols="30"></textarea><br><br>
+
+        
+        <input  type="checkbox" id="declearation", name="declearation" required> 
+        <label for="declearation">I agree to the terms and condations</label><br><br>
+
+        <button type="submit">Sign-up</button>
+        <button type="reset">Reset</button>
+    </fieldset><br>
+</body>
+</html>
+</body>
+</html>
