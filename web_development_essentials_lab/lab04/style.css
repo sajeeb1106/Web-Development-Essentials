@@ -1,0 +1,33 @@
+/* 1. Element selector: every <p> */
+/* p { color: blue; text-align: center; } */
+/* 2. Id selector: one element, written with # */
+#para1 { color: rgba(255, 0, 0, 0.171); }
+
+/* 3. Class selector: any element with the class, written with . */
+.center { text-align: right;}
+
+/* 4. Class for one element type only */
+p.note { background-color: yellow; }
+
+  /* 5. Universal selector: everything */
+  * { font-family: Arial, sans-serif; }
+
+  /* 6. Group selector: shared rule, separated by commas */
+  /* h1, h2, h3 { text-decoration: underline; } */
+
+ .b1 { border-style: solid;  border-color: red;   border-width: 3px; }
+  .b2 { border-style: dotted; border-color: blue;  border-width: 4px; }
+  .b3 { border-style: dashed; border-color: green; border-width: 2px; }
+  .b4 { border-style: double; border-color: rgb(120,0,160); border-width: 6px; }
+  .b5 { border-style: none; }
+
+
+  /* border-radius: 1, 2, 3 and 4 values */
+  .r1 { border: 3px solid red; border-radius: 30px; }
+  .r2 { border: 3px solid red; border-radius: 20% 10%; }
+  .r3 { border: 3px solid red; border-radius: 10% 30% 20%; }
+  .r4 { border: 3px solid red; border-radius: 10% 30% 20% 40%; }
+
+  img.left  { float: left;  width: 150px; margin: 0 15px 10px 0; }
+  img.right { float: right; width: 150px; margin: 0 0 10px 15px; }
+  .clear    { clear: both; }
