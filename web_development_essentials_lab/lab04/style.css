@@ -1,13 +1,13 @@
 /* 1. Element selector: every <p> */
 /* p { color: blue; text-align: center; } */
 /* 2. Id selector: one element, written with # */
-#para1 { color: rgba(255, 0, 0, 0.171); }
+#para1 { color: rgba(13, 255, 0, 0.916); }
 
 /* 3. Class selector: any element with the class, written with . */
 .center { text-align: right;}
 
 /* 4. Class for one element type only */
-p.note { background-color: yellow; }
+p.note { background-color: rgb(0, 255, 106); }
 
   /* 5. Universal selector: everything */
   * { font-family: Arial, sans-serif; }
