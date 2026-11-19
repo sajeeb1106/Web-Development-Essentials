@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Book a Trip | Sundarban Trails</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="app.js" defer></script>
+    </head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="index.html">
+            <span class="brand-mark">ST</span>
+            <span>Sundarban <b>Trails</b><small>Discover Bangladesh</small></span>
+        </a>
+        <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+        <nav class="main-nav" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="destinations.html">Destinations</a>
+            <a href="packages.html">Packages</a>
+            <a class="active" href="booking.html">Booking</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <section class="page-hero compact-hero" style="background-image:linear-gradient(90deg,rgba(4,35,32,.82),rgba(4,35,32,.2)),url('https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1600&q=80')">
+            <p class="eyebrow">LET’S PLAN IT</p>
+            <h1>Book your next escape.</h1>
+            <p>Share a few details and see an estimated trip cost instantly.</p>
+        </section>
+        <section class="section booking-layout">
+            <form id="bookingForm" class="form-card" novalidate>
+                <p class="eyebrow">BOOKING INQUIRY</p>
+                <h2>Tell us about your trip</h2>
+                <div class="form-grid">
+                    <div class="field">
+                        <label for="fullName">Full name *</label>
+                        <input id="fullName" name="fullName" type="text" autocomplete="name" required minlength="2">
+                        <small class="error" id="nameError"></small>
+                    </div>
+                    <div class="field">
+                        <label for="travelDate">Travel date *</label>
+                        <input id="travelDate" name="travelDate" type="date" required>
+                        <small class="error" id="dateError"></small>
+                    </div>
+                    <div class="field">
+                        <label for="travelers">Number of travellers *</label>
+                        <input id="travelers" name="travelers" type="number" min="1" max="50" value="1" required>
+                        <small class="error" id="travelersError"></small>
+                    </div>
+                    <div class="field">
+                        <label for="destination">Destination *</label>
+                        <select id="destination" name="destination" required>
+                            <option value="">Select destination</option>
+                            <option>Cox’s Bazar</option>
+                            <option>The Sundarbans</option>
+                            <option>Sylhet</option>
+                            <option>Bandarban</option>
+                            <option>Chattogram heritage</option>
+                            <option>Jaflong & river valley</option>
+                        </select>
+                        <small class="error" id="destinationError"></small>
+                    </div>
+<div class="field full-field">
+    <label for="notes">Additional notes</label>
+    <textarea id="notes" name="notes" rows="4" placeholder="Tell us about any preferences or questions..."></textarea>
+</div>
+</div>
+<div class="form-actions">
+    <button class="btn btn-primary" type="submit">Submit booking inquiry</button>
+    <button class="btn btn-outline" type="reset">Reset form</button>
+</div>
+<p id="bookingMessage" class="form-message" role="status" aria-live="polite"></p>
+<p class="note">This is a front-end classroom prototype. Submitting displays a demo confirmation; it does not send or store your personal information.</p></form>
+<aside class="estimate-card">
+    <p class="eyebrow">LIVE COST ESTIMATE</p>
+    <h2>Your trip summary</h2>
+    <div class="estimate-line">
+        <span>Package price</span>
+        <strong id="unitPrice">৳0</strong>
+    </div>
+    <div class="estimate-line">
+        <span>Travellers</span>
+        <strong id="travelerCount">1</strong>
+    </div>
+    <div class="estimate-line">
+        <span>Add-ons</span>
+        <strong id="addonCost">৳0</strong>
+    </div>
+    <div class="estimate-line">
+        <span>Subtotal</span>
+        <strong id="subtotal">৳0</strong>
+    </div>
+    <div class="estimate-line discount-line">
+        <span>Group discount</span>
+        <strong id="discount">৳0</strong>
+    </div>
+    <div class="estimate-total">
+        <span>Estimated total</span>
+        <strong id="total">৳0</strong>
+    </div>
+    <p class="estimate-hint">A 10% discount is applied automatically for groups of five or more travellers.</p>
+</aside>
+</section>
+</main>
+<footer class="site-footer">
+  <div>
+    <a class="brand brand-footer" href="index.html">
+      <span class="brand-mark">ST</span>
+      <span>Sundarban <b>Trails</b><small>Discover Bangladesh</small></span>
+    </a>
+    <p>Local journeys. Lasting memories.</p>
+  </div>
+  <div>
+    <h4>Explore</h4>
+    <a href="destinations.html">Destinations</a>
+    <a href="packages.html">Packages & pricing</a>
+    <a href="booking.html">Booking</a>
+  </div>
+  <div>
+    <h4>Contact</h4>
+    <p>Dhaka, Bangladesh</p>
+    <p>+880 1762-710303</p>
+    <p>261-16-042@diu.edu.bd</p>
+  </div>
+  <div class="copyright">© 2026 Sundarban Trails. Design by Md Shahinur Rahman.</div>
+</footer>
+<button id="backToTop" aria-label="Back to top">↑</button>
+</body>
+</html>

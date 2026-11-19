@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact | Sundarban Trails</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="app.js" defer></script>
+    </head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="index.html">
+            <span class="brand-mark">ST</span>
+            <span>Sundarban <b>Trails</b><small>Discover Bangladesh</small></span>
+        </a>
+        <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+        <nav class="main-nav" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="destinations.html">Destinations</a>
+            <a href="packages.html">Packages</a>
+            <a href="booking.html">Booking</a>
+            <a class="active" href="contact.html">Contact</a>
+        </nav>
+    </header>
+<main>
+    <section class="page-hero compact-hero" style="background-image:linear-gradient(90deg,rgba(4,35,32,.82),rgba(4,35,32,.2)),url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80')">
+        <p class="eyebrow">WE’RE HERE TO HELP</p>
+        <h1>Let’s talk travel.</h1>
+        <p>Questions about a destination or package? Send us a message.</p>
+    </section>
+<section class="section contact-layout">
+    <div>
+        <p class="eyebrow">GET IN TOUCH</p>
+        <h2>We’d love to<br><em>hear from you.</em></h2>
+        
+        <div class="contact-detail"><b>Office</b>
+            <p>Dhaka, Bangladesh</p>
+        </div>
+        
+        <div class="contact-detail"><b>Phone</b>
+            <p>+880 1762-710303</p>
+        </div>
+        
+        <div class="contact-detail">
+            <b>Email</b><p>261-16-042@diu.edu.bd</p>
+        </div>
+        <div class="contact-detail"><b>Office hours</b><p>Saturday–Thursday, 9:00 AM–6:00 PM</p></div>
+    </div>
+    <form id="contactForm" class="form-card" novalidate>
+        <p class="eyebrow">SEND A MESSAGE</p>
+        <h2>How can we help?</h2>
+        <div class="field">
+            <label for="contactName">Name *</label>
+            <input id="contactName" name="name" required minlength="2">
+            <small class="error" id="contactNameError"></small>
+        </div>
+        <div class="field">
+            <label for="contactEmail">Email *</label>
+            <input id="contactEmail" name="email" type="email" required>
+            <small class="error" id="contactEmailError"></small>
+        </div>
+        <div class="field">
+            <label for="subject">Subject *</label>
+            <input id="subject" name="subject" required>
+            <small class="error" id="subjectError"></small>
+        </div>
+        <div class="field">
+            <label for="message">Message *</label>
+            <textarea id="message" name="message" rows="5" required minlength="10"></textarea>
+            <small class="error" id="messageError"></small>
+        </div>
+        <button class="btn btn-primary" type="submit">Send message</button>
+        <p id="contactMessage" class="form-message" role="status" aria-live="polite"></p>
+        <p class="note">Demo form only. No message is transmitted to a server.</p>
+    </form>
+</section>
+<div class="faq-item"><button class="faq-question" aria-expanded="false">What happens if weather affects my trip? <span>+</span></button><div class="faq-answer" hidden><p>Some activities may be changed or postponed for safety. Confirm the latest local guidance and cancellation terms before travelling.</p></div></div>
+<div class="faq-item"><button class="faq-question" aria-expanded="false">Is this website accepting real bookings? <span>+</span></button><div class="faq-answer" hidden><p>This is an academic prototype for a web development assignment. Forms show client-side demo feedback and do not create real reservations.</p></div></div>
+</div></section></main>
+<footer class="site-footer">
+  <div>
+    <a class="brand brand-footer" href="index.html">
+      <span class="brand-mark">ST</span>
+      <span>Sundarban <b>Trails</b><small>Discover Bangladesh</small></span>
+    </a>
+    <p>Local journeys. Lasting memories.</p>
+  </div>
+  <div>
+    <h4>Explore</h4>
+    <a href="destinations.html">Destinations</a>
+    <a href="packages.html">Packages & pricing</a>
+    <a href="booking.html">Booking</a>
+  </div>
+  <div>
+    <h4>Contact</h4>
+    <p>Dhaka, Bangladesh</p>
+    <p>+880 1762-710303</p>
+    <p>261-16-042@diu.edu.bd</p>
+  </div>
+  <div class="copyright">© 2026 Sundarban Trails. Design by Md Shahinur Rahman.</div>
+</footer>
+<button id="backToTop" aria-label="Back to top">↑</button>
+</body>
+</html>

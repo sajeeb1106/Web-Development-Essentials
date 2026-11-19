@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Destinations | Sundarban Trails</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="app.js" defer></script>
+    </head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="index.html">
+            <span class="brand-mark">ST</span>
+            <span>Sundarban <b>Trails</b><small>Discover Bangladesh</small></span>
+        </a>
+        <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+        <nav class="main-nav" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a class="active" href="destinations.html">Destinations</a>
+            <a href="packages.html">Packages</a>
+            <a href="booking.html">Booking</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+<main>
+    <section class="page-hero compact-hero" style="background-image:linear-gradient(90deg,rgba(4,35,32,.82),rgba(4,35,32,.2)),url('https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=1600&q=80')">
+        <p class="eyebrow">FIND YOUR PLACE</p>
+        <h1>Explore Bangladesh.</h1>
+        <p>Choose a region, find your travel style and discover your next stop.</p>
+    </section>
+<section class="section">
+    <div class="filter-panel">
+        <div>
+            <label for="regionFilter">Region</label>
+            <select id="regionFilter">
+                <option value="all">All regions</option>
+                <option value="Chattogram">Chattogram</option>
+                <option value="Khulna">Khulna</option>
+                <option value="Sylhet">Sylhet</option>
+                <option value="Bandarban">Bandarban</option>
+            </select>
+        </div>
+        <div>
+            <label for="typeFilter">Tour type</label>
+            <select id="typeFilter">
+                <option value="all">All tour types</option>
+                <option value="Beach">Beach</option>
+                <option value="Nature">Nature</option>
+                <option value="Adventure">Adventure</option>
+                <option value="Culture">Culture</option>
+            </select>
+        </div>
+        <div class="price-filter">
+            <label for="priceFilter">Maximum price per person: <strong id="priceValue">৳20,000</strong></label>
+            <input id="priceFilter" type="range" min="3000" max="20000" step="500" value="20000">
+        </div>
+        <button class="btn btn-dark" id="resetFilters" type="button">Reset filters</button>
+    </div>
+</div>
+<p id="resultCount" class="result-count" aria-live="polite">Showing all destinations</p>
+<div class="card-grid destination-list" id="destinationList">
+<article class="destination-card filter-card" id="coxs-bazar" data-region="Chattogram" data-type="Beach" data-price="8500">
+    <img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=900&q=80" alt="Coastal sea and beach">
+    <div class="card-body">
+        <span class="tag">Chattogram · Beach</span><h3>Cox’s Bazar</h3><p>Enjoy the long sandy beach, sunset views and local seafood.</p><p class="starting-price">From ৳8,500 / person</p><a class="text-link" href="#coxs-detail">View itinerary →</a></div></article>
+<article class="destination-card filter-card" id="sundarbans" data-region="Khulna" data-type="Nature" data-price="14500"><img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=900&q=80" alt="Dense green mangrove forest"><div class="card-body"><span class="tag">Khulna · Nature</span><h3>The Sundarbans</h3><p>Discover mangrove waterways and wildlife with a local guide.</p><p class="starting-price">From ৳14,500 / person</p><a class="text-link" href="#sundar-detail">View itinerary →</a></div></article>
+<article class="destination-card filter-card" id="sylhet" data-region="Sylhet" data-type="Nature" data-price="9000"><img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Mountain lake and green landscape"><div class="card-body">
+    <span class="tag">Sylhet · Nature</span>
+    <h3>Sylhet & tea gardens</h3>
+    <p>Visit rolling tea gardens, rivers and green countryside.</p>
+    <p class="starting-price">From ৳9,000 / person</p>
+    <a class="text-link" href="#sylhet-detail">View itinerary →</a>
+</div>
+</article>
+<article class="destination-card filter-card" data-region="Bandarban" data-type="Adventure" data-price="12000">
+    <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=900&q=80" alt="Mountain peaks">
+    <div class="card-body">
+        <span class="tag">Bandarban · Adventure</span>
+        <h3>Bandarban hills</h3>
+        <p>Take in hill scenery, local culture and scenic viewpoints.</p>
+        <p class="starting-price">From ৳12,000 / person</p>
+        <a class="text-link" href="#bandar-detail">View itinerary →</a>
+    </div>
+</article>
+<article class="destination-card filter-card" data-region="Chattogram" data-type="Culture" data-price="6500">
+    <img src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=900&q=80" alt="Traditional village landscape">
+    <div class="card-body">
+        <span class="tag">Chattogram · Culture</span>
+        <h3>Chattogram heritage</h3>
+        <p>Explore local food, heritage sites and city life.</p>
+        <p class="starting-price">From ৳6,500 / person</p>
+        <a class="text-link" href="#heritage-detail">View itinerary →</a>
+    </div>
+</article>
+<article class="destination-card filter-card" data-region="Sylhet" data-type="Adventure" data-price="11000">
+    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80" alt="Hiking trail through nature">
+    <div class="card-body">
+        <span class="tag">Sylhet · Adventure</span>
+        <h3>Jaflong & river valley</h3>
+        <p>Enjoy river views, stone landscapes and outdoor exploration.</p>
+        <p class="starting-price">From ৳11,000 / person</p>
+        <a class="text-link" href="#jaflong-detail">View itinerary →</a>
+    </div>
+</article>
+</div>
+<p id="noResults" class="empty-state" hidden>No destinations match these filters. Try changing your selection.</p>
+</section>
+<section class="section soft-bg">
+    <p class="eyebrow">SAMPLE TRIP PLANS</p>
+    <h2>Make the most of your visit</h2>
+    <div class="itinerary-grid">
+<article class="itinerary" id="coxs-detail">
+    <h3>Cox’s Bazar · 3 days</h3>
+    <ol>
+        <li><b>Day 1:</b> Arrive, check in and enjoy the beach sunset.</li>
+        <li><b>Day 2:</b> Beach time, local lunch and a relaxed evening.</li>
+        <li><b>Day 3:</b> Breakfast, free time and return journey.</li>
+    </ol>
+</article>
+<article class="itinerary" id="sundar-detail">
+    <h3>Sundarbans · 3 days</h3>
+    <ol>
+        <li><b>Day 1:</b> Travel to the gateway area and overnight stay.</li>
+        <li><b>Day 2:</b> Guided boat excursion through permitted waterways.</li>
+        <li><b>Day 3:</b> Breakfast and return journey.</li>
+    </ol>
+</article>
+<article class="itinerary" id="sylhet-detail">
+    <h3>Sylhet · 2 days</h3>
+    <ol>
+        <li><b>Day 1:</b> Explore tea gardens and nearby viewpoints.</li>
+        <li><b>Day 2:</b> Visit a river landscape and return to Dhaka.</li>
+    </ol>
+</article>
+<article class="itinerary" id="bandar-detail">
+    <h3>Bandarban · 3 days</h3>
+    <ol>
+        <li><b>Day 1:</b> Arrive and explore the town.</li>
+        <li><b>Day 2:</b> Visit an accessible viewpoint with a local guide.</li>
+        <li><b>Day 3:</b> Breakfast and return journey.</li>
+    </ol>
+</article>
+<article class="itinerary" id="heritage-detail">
+    <h3>Chattogram · 2 days</h3>
+    <ol>
+        <li><b>Day 1:</b> City heritage walk and local food experience.</li>
+        <li><b>Day 2:</b> Explore a local market and return.</li>
+    </ol>
+</article>
+<article class="itinerary" id="jaflong-detail">
+    <h3>Jaflong · 2 days</h3>
+    <ol>
+        <li><b>Day 1:</b> Travel to Sylhet and explore the river valley.</li>
+        <li><b>Day 2:</b> Morning sightseeing and return journey.</li>
+    </ol>
+</article>
+</div>
+<p class="note">Itineraries are sample plans. Final routes depend on weather, local rules, transport and confirmed availability.</p>
+<a class="btn btn-primary" href="booking.html">Plan a trip</a>
+</section>
+</main>
+<footer class="site-footer">
+  <div>
+    <a class="brand brand-footer" href="index.html">
+      <span class="brand-mark">ST</span>
+      <span>Sundarban <b>Trails</b><small>Discover Bangladesh</small></span>
+    </a>
+    <p>Local journeys. Lasting memories.</p>
+  </div>
+  <div>
+    <h4>Explore</h4>
+    <a href="destinations.html">Destinations</a>
+    <a href="packages.html">Packages & pricing</a>
+    <a href="booking.html">Booking</a>
+  </div>
+  <div>
+    <h4>Contact</h4>
+    <p>Dhaka, Bangladesh</p>
+    <p>+880 1762-710303</p>
+    <p>261-16-042@diu.edu.bd</p>
+  </div>
+  <div class="copyright">© 2026 Sundarban Trails. Design by Md Shahinur Rahman.</div>
+</footer>
+<button id="backToTop" aria-label="Back to top">↑</button>
+</body>
+</html>
