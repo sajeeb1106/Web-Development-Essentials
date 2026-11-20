@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap');
-:root
-{   --ink:#17332e;
+:root{   
+    --ink:#17332e;
     --green:#1d6654;
     --green-dark:#10483d;
     --mint:#e9f1ed;
