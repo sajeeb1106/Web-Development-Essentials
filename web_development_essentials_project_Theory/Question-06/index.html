@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopEase - Online Shopping</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <h2 class="logo">ShopEase</h2>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#cart">Shopping Cart</a></li>
+                <li><a href="#checkout">Checkout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="home" class="hero">
+        <h1>Welcome to ShopEase</h1>
+        <p>Discover amazing products at affordable prices. Your shopping experience starts here!</p>
+        <a href="#products" class="hero-btn">Shop Now</a>
+    </section>
+    <section id="products" class="container">
+        <h2 class="section-title">Our Products</h2>
+        <p class="section-description">Explore our latest collection.</p>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="#" alt="Wireless Headphones">
+                <h3>Wireless Headphones</h3>
+                <p>High-quality wireless headphones.</p>
+                <h4>৳1500</h4>
+                <button onclick="addToCart('Wireless Headphones', 1500)">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="#" alt="Casual T-Shirt">
+                <h3>Casual T-Shirt</h3>
+                <p>Comfortable cotton T-shirt.</p>
+                <h4>৳500</h4>
+                <button onclick="addToCart('Casual T-Shirt', 500)">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="#" alt="Modern Table Lamp">
+                <h3>Modern Table Lamp</h3>
+                <p>Stylish lamp for your home.</p>
+                <h4>৳1200</h4>
+                <button onclick="addToCart('Modern Table Lamp', 1200)">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="#" alt="Programming Book">
+                <h3>Programming Book</h3>
+                <p>Learn programming with practical examples.</p>
+                <h4>৳800</h4>
+                <button onclick="addToCart('Programming Book', 800)">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+    <section id="cart" class="container cart-section">
+        <h2 class="section-title">Shopping Cart</h2>
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Product Name</th>
+                        <th>Unit Price</th>
+                        <th>Quantity</th>
+                        <th>Subtotal</th>
+                    </tr>
+                </thead>
+                <tbody id="cart-items">
+                    <tr>
+                        <td colspan="4">Your cart is empty.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h3 class="total">Total Amount:<span id="cart-total">৳0</span></h3>
+    </section>
+    <section id="checkout" class="container">
+        <h2 class="section-title">Checkout Form</h2>
+        <form id="checkout-form" onsubmit="handleCheckout(event)" novalidate>
+            <div class="form-group">
+                <label for="customer-name">Customer Name</label>
+                <input type="text" id="customer-name" placeholder="Enter your full name">
+            </div>
+            <div class="form-group">
+                <label for="customer-phone">Phone Number</label>
+                <input type="tel" id="customer-phone" placeholder="Enter your phone number">
+            </div>
+            <button type="submit" class="checkout-btn">Place Order</button>
+            <p id="checkout-message"></p>
+        </form>
+    </section>
+    <section class="container discount-section">
+        <h2 class="section-title">Special Discount Offer</h2>
+        <div class="discount-card">
+            <h3>Wireless Headphones</h3>
+            <p>Original Price: ৳2000</p>
+            <p>Discount: 15%</p>
+            <h3>Discounted Price:<span id="discounted-price">৳0</span></h3>
+        </div>
+    </section>
+    <footer>
+        <p>Designed by Md Shahinur Rahman | CIS-24</p>
+    </footer>
+</body>
+</html>
