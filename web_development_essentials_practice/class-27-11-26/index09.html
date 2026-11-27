@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Click the button to replace this document new content.</p>
+    <button onclick="myFunction()">Try it!</button>
+
+    <script>
+        function myFunction() 
+        {
+            var w = window.open(); //open a new html document in the same window
+            document.open(); //open a new html document
+            document.write("<h2>Hello, World!</h2>");  //write new content to the document
+            document.close(); //close the document to display the new content
+        }
+    </script>
+</body>
+</html>

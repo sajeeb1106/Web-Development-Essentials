@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ol id="MyList"></ol>
+    <input id="Item"/>
+    <button onclick="AppendElement()">Append</button>
+    <script>
+        function AppendElement()
+        {
+            var Item = document.getElementById("Item").value;
+            var MyList = document.getElementById("MyList");
+            let li = document.createElement('li');
+            li.innerHTML = Item;
+            MyList.appendChild(li);
+        }
+    </script>
+</body>
+</html>
